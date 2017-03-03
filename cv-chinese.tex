@@ -50,26 +50,24 @@
 	
 	% default section title for publications is 'Literatur'. we want
 	% to use 'Publikationen' instead.
-	\renewcommand{\refname}{Publikationen}
+	\renewcommand{\refname}{Publication}
 	\maketitle
 	
-	\section{教育经历}
-	\cventry{2010--2014}{本科}{南京大学计算机科学与技术系}{}{}{}
-	\cventry{2015--至今}{研究生}{南京大学计算机科学与技术系}{}{}{}
 	\section{个人简介}
 	\cvline{}
 	{
-		我的兴趣主要在计算机体系结构、FPGA、异构计算、嵌入式系统等方面。
+		我的兴趣主要在FPGA、嵌入式系统、计算机体系结构、异构计算等方面。
 		\newline
-		本科期间，主要在FPGA和ARM+FPGA异构系统做过一些项目。
+		本科期间，项目集中在FPGA和ARM+FPGA异构系统。
 		\newline
-		研究生期间，研究课题是RDMA网络拥塞控制，RDMA网卡上实现新的功能，加速数据中心网络。
+		研究生期间，我的研究课题是数据中心网络加速，主要关注中间件和RDMA拥塞控制。
 	}
-	
+	\section{教育经历}
+	\cventry{2015--至今}{硕士}{南京大学计算机科学与技术系}{}{}{}
+	\cventry{2010--2014}{本科}{南京大学计算机科学与技术系}{}{}{}
 	\section{获奖情况}
-	\cvline{2011--2012}{国家励志奖奖学金,人民奖学金一等奖}
 	\cvline{2012--2013}{人民奖学金三等奖}
-	
+	\cvline{2011--2012}{国家励志奖奖学金,人民奖学金一等奖}	
 	\section{技能}
 	\cvline{编程语言}{Verilog HDL, C, C++, Python, Java, Matlab}
 	
@@ -79,29 +77,28 @@
 		\smallskip
 		\textbf{基于FPGA的RDMA网卡实现}
 		\medskip \\
-		RDMA是数据中心网络传输技术新趋势。本项目是将目前主流的RDMA协议实现在FPGA网卡上，作为RDMA网络研究平台。项目采用Xilinx HLS结合Microblaze，在Xilinx Kintex7芯片实现，可以实现10Gbps速率发送RDMA报文。同时，该平台可以支持与商业RDMA网卡互联。
+		RDMA是数据中心网络传输技术新趋势。本项目是将目前主流的RDMA协议实现在FPGA上，作为RDMA网络研究平台。项目采用Xilinx HLS结合Microblaze，在Xilinx Kintex7芯片实现，可以达到10Gbps速率发送RDMA报文。同时，该平台可以支持与商业RDMA网卡互联。\newline
 	}
 	\cventry{2015-3--2015-9}{南京大学}{}{南京}{}
 	{
 		\smallskip
 		\textbf{基于FPGA的软件定义中间件实现}
 		\medskip \\
-		本项目中，我们定义类C伪语言实现自定义中间件的功能，最终伪语言运行在FPGA上。伪语言首先转换为Xilinx HLS，然后转成verilog烧写在FPGA芯片上，主要实现的中间件有NAT，AES加密解密等。
+		本项目中，我们定义类C伪语言实现自定义中间件的功能，最终伪语言运行在FPGA上。伪语言首先经过编译器转换为Xilinx HLS，然后转成verilog烧写在FPGA芯片上，主要实现的中间件有NAT，AES加密解密等。
 	}
 	\cventry{2013--2015}{南京大学}{}{南京}{}
 	{
 		\smallskip
 		\textbf{SimMIPS: 基于FPGA的MIPS嵌入式系统}
 		\medskip \\
-		SimMIPS是基于FPGA实现的片上系统，包括MIPS32核心，总线以及各种外设等。MIPS32核心按照标准MIPS32指令集实现，同时包括有内存管理单元(MMU)。使用C/C++开发的应用程序或操作系统，经过MIPS交叉编译工具编译后的代码可以直接在MIPS32核心中运行。
-		关于本项目更多的细节可以访问 \url{https://github.com/jackyangNJ/SimMIPS}。
+		SimMIPS是基于FPGA实现的片上系统，包括MIPS32核心，总线以及多种外设等。MIPS32核心按照标准MIPS32指令集实现，同时包括有内存管理单元(MMU)。使用C/C++开发的应用程序或操作系统，经过MIPS交叉编译工具编译后的代码可以直接在MIPS32核心中运行。更多细节可以访问\url{https://github.com/jackyangNJ/SimMIPS}。 \newline
 	}
 	\cventry{2013--2014}{南京大学}{}{南京}{}
 	{
 		\smallskip
 		\textbf{SmartCar: 室内导航智能小车}
 		\medskip  \\
-		SmartCar旨在结合多种传感器技术，实现室内导航的功能。我们基于智能车zrobot平台，该平台的控制器是融合ARM核心的FPGA芯片, 使用C/C++、Java 和 Verilog HDL语言，结合图像识别以及传统惯性导航技术，实现室内定位。图像识别方法，是在室内张贴含有位置信息的二维码，小车在行走中可以扫描定位。项目相关源码可以访问\url{https://github.com/jackyangNJ/SmartCar}.
+		SmartCar旨在结合多种传感器技术，实现室内导航的功能。我们基于智能车zrobot平台，该平台的控制器是融合ARM核心的FPGA芯片, 使用C/C++、Java 和 Verilog HDL语言，结合图像识别以及传统惯性导航技术，实现室内定位。图像识别方法是在室内张贴含有位置信息的二维码，小车在行走中可以扫描定位。项目相关源码可以访问\url{https://github.com/jackyangNJ/SmartCar}.\newline
 	}
 	
 	\cventry{2013 暑期}{计算所}{中科院}{北京}{}
@@ -109,7 +106,7 @@
 		\smallskip
 		\textbf{探索Xilinx MicroBlaze性能以及搭建平台}
 		\medskip  \\
-		本项目是辅助计算所项目研究。我的工作是在Xilinx FPGA上，测试MicroBlaze上运行Linux的整数计算性能，同时搭建一个多核MicroBlaze系统，各核心之间通信使用高速AXI Stream。
+		本项目是辅助计算所项目研究。我的工作是在Xilinx FPGA上，测试MicroBlaze运行Linux的整数计算性能，同时搭建一个多核MicroBlaze系统原型，各核心之间使用高速AXI Stream通信。
 	}
 	
 	
@@ -117,11 +114,11 @@
 	% multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 	% for BibTeX numerical labels
 	
-	\nocite{*}
+	%\nocite{*}
 	% unsrt means the publications are displayed in the order in which
 	% they appear in the publications.bib file
-	\bibliographystyle{unsrt}
-	\bibliography{publications}
+	%\bibliographystyle{unsrt}
+	%\bibliography{publications}
 	
 	% Publications from a BibTeX file using the multibib package
 	%\section{Publications}
