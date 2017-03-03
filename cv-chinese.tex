@@ -77,21 +77,21 @@
 	\cventry{2016--至今}{南京大学}{}{南京}{}
 	{
 		\smallskip
-		\emph{基于FPGA的RDMA网卡实现}
+		\textbf{基于FPGA的RDMA网卡实现}
 		\medskip \\
 		RDMA是数据中心网络传输技术新趋势。本项目是将目前主流的RDMA协议实现在FPGA网卡上，作为RDMA网络研究平台。项目采用Xilinx HLS结合Microblaze，在Xilinx Kintex7芯片实现，可以实现10Gbps速率发送RDMA报文。同时，该平台可以支持与商业RDMA网卡互联。
 	}
 	\cventry{2015-3--2015-9}{南京大学}{}{南京}{}
 	{
 		\smallskip
-		\emph{基于FPGA的软件定义中间件实现}
+		\textbf{基于FPGA的软件定义中间件实现}
 		\medskip \\
-		软件 
+		本项目中，我们定义类C伪语言实现自定义中间件的功能，最终伪语言运行在FPGA上。伪语言首先转换为Xilinx HLS，然后转成verilog烧写在FPGA芯片上，主要实现的中间件有NAT，AES加密解密等。
 	}
 	\cventry{2013--2015}{南京大学}{}{南京}{}
 	{
 		\smallskip
-		\emph{SimMIPS: 基于FPGA的MIPS嵌入式系统}
+		\textbf{SimMIPS: 基于FPGA的MIPS嵌入式系统}
 		\medskip \\
 		SimMIPS是基于FPGA实现的片上系统，包括MIPS32核心，总线以及各种外设等。MIPS32核心按照标准MIPS32指令集实现，同时包括有内存管理单元(MMU)。使用C/C++开发的应用程序或操作系统，经过MIPS交叉编译工具编译后的代码可以直接在MIPS32核心中运行。
 		关于本项目更多的细节可以访问 \url{https://github.com/jackyangNJ/SimMIPS}。
@@ -99,19 +99,17 @@
 	\cventry{2013--2014}{南京大学}{}{南京}{}
 	{
 		\smallskip
-		\emph{SmartCar: 室内导航智能小车}
+		\textbf{SmartCar: 室内导航智能小车}
 		\medskip  \\
-		SmartCar旨在结合多种传感器技术，实现室内导航的功能。我们基于\href{http://zrobot.org/}{\emph{zrobot}} 平台，该平台由融合ARM核心的FPGA芯片控制, 使用C/C++, Java 和 Verilog HDL语言，结合To achieve autonomous navigation, we combined the traditional inertial navigation technology with image processing and added many sensors or devices to the car, such as acceleration sensor, gyroscope, USB camera, wireless network card, etc. For more information, you can visit \url{https://github.com/jackyangNJ/SmartCar}.
+		SmartCar旨在结合多种传感器技术，实现室内导航的功能。我们基于智能车zrobot平台，该平台的控制器是融合ARM核心的FPGA芯片, 使用C/C++、Java 和 Verilog HDL语言，结合图像识别以及传统惯性导航技术，实现室内定位。图像识别方法，是在室内张贴含有位置信息的二维码，小车在行走中可以扫描定位。项目相关源码可以访问\url{https://github.com/jackyangNJ/SmartCar}.
 	}
 	
-	\cventry{2013 summer}{Institute of Computing Technology}{Chinese Academy of Sciences}{Beijing}{China}
+	\cventry{2013 暑期}{计算所}{中科院}{北京}{}
 	{
 		\smallskip
-		\emph{testing Xilinx soft processor MicroBlaze performance and building a prototype system}
+		\textbf{探索Xilinx MicroBlaze性能以及搭建平台}
 		\medskip  \\
-		The group I joined was to implement a system by using a new memory access protocol based on the asynchronous request and response message.
-		This message-based memory could improve the effective utilization of memory bandwidth.
-		My major work was to test the performance of soft processor MicroBlaze on target hardware to indicate whether it was suitable to be used in the system, and meanwhile I built a prototype system, a network composed of a interconnect 3x3 mesh of nine MicroBlaze processors on one FPGA chip.
+		本项目是辅助计算所项目研究。我的工作是在Xilinx FPGA上，测试MicroBlaze上运行Linux的整数计算性能，同时搭建一个多核MicroBlaze系统，各核心之间通信使用高速AXI Stream。
 	}
 	
 	
