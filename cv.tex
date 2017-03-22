@@ -45,49 +45,61 @@
 
 % default section title for publications is 'Literatur'. we want
 % to use 'Publikationen' instead.
-\renewcommand{\refname}{Publikationen}
+\renewcommand{\refname}{Publication}
 \maketitle
 
-\section{Education}
-\cventry{2010--2014}{B.Sc. Computer Science}{Nanjing University}{}{}{}
 \section{Interests}
 \cvline{}
 {
-    My major interests lie in computer architecture, Field Programmable Gate Array (FPGA) and embedded systems.
-    During my undergraduate period, I was a lead programmer in some embedded systems.
-    Unlike developing desktop software, there is more freedom to modify the hardware in embedded systems, so great efforts are needed to search for the best compromise between the hardware and the software.
-    \newline
-    I am also interested in programming on FPGA and embedded development boards, such as Altera DE2-70, STM32 and Raspberry PI.
-    And I even have attempted to build a quadcopter myself from scratch.
+	My major interests lie in computer architecture, Field Programmable Gate Array (FPGA) and embedded systems.
+	\newline
+	During my undergraduate period, I focused my projects on FPGA and ARM+FPGA heterogeneous systems.
+	\newline
+	During my graduate studies, my research topic was data center network acceleration and I focused on middleware and RDMA congestion control.
 }
+\section{Education}
+\cventry{2015--2018}{M.Sc. Computer Science}{Nanjing University}{}{}{}
+\cventry{2010--2014}{B.Sc. Computer Science}{Nanjing University}{}{}{}
 
 \section{Scholarships and Awards}
-\cvline{2011--2012}{National Endeavor Fellowship, The First Prize People Scholarship}
 \cvline{2012--2013}{The Third Prize People Scholarship}
+\cvline{2011--2012}{National Endeavor Fellowship, The First Prize People Scholarship}
+
 
 \section{Technical Skills}
-\cvline{Languages}{C, C++, Java, Verilog HDL, Python, Perl, Matlab, \LaTeX}
-\cvline{\small Operating Systems}{Windows, Linux}
+\cvline{Languages}{Verilog HDL, C/C++, Java, , Python, Matlab}
+%\cvline{\small Operating Systems}{Windows, Linux}
 
 \section{Project Experience}
-\cventry{2012--present}{Nanjing University}{}{Nanjing}{China}
+\section{Project Experience}
+\cventry{2016--present}{Nanjing University}{}{Nanjing}{China}
+{
+	\smallskip
+	\emph{FPGA-based RDMA NIC}
+	\medskip \\
+	RDMA is the new trend of data center network. The project aims to build a RDMA research platform by implementing RDMA protocol on FPGA as Network Interface Controller(NIC). Based on Xilinx HLS and Microblaze, the throughput of RDMA NIC can reach line speed(10Gbps) on Xilinx Kintex7 chip, and it can also communication with commercial RDMA NIC.\newline
+}
+\cventry{2015-3--2015-9}{Nanjing University}{}{Nanjing}{China}
+{
+   \smallskip
+	\emph{FPGA-based Software Define Middleware}
+	\medskip \\
+	Software Define Middleware(SDM) needs a uniform abstract language to run on different platforms, such as CPU, NPU and FPGA. I define a C-like pseudo language to implement SDM function, and it can be run on FPGA. C-like pseudo language is transformed in to Xilinx HLS by custom compiler, then in to verilog. 
+}
+\cventry{2012--2015}{Nanjing University}{}{Nanjing}{China}
 {
     \smallskip
     \emph{SimMIPS: a MIPS-based embedded system on FPGA}
     \medskip \\
-    SimMIPS is an embedded system implemented on FPGA, including CPU, peripherals, multiple physical interfaces.
-    As a simplified version of MIPS32 4Kc processor, SimMIPS covers most instructions of MIPS32 Release 1 Instruction Set, and programmes compiled by GNU GCC could be executed on our platform without no modification.
-    SimMIPS would be adopted as an experimental platform in \emph{Comprehensive Experiments on Computer System} course for juniors in the Department of Computer Science in Nanjing University.
-    You can visit \url{https://github.com/jackyang74/SimMIPS} for more details about our project.
+    SimMIPS is an embedded system implemented on FPGA, including CPU, peripherals and multiple BUS interfaces. As a simplified version of MIPS32 4Kc processor, SimMIPS covers most instructions of MIPS32 Release 1 Instruction Set, and programmes or Operating System compiled by GNU GCC could be executed on SimMIPS. For more details, you can visit \url{https://github.com/jackyangNJ/SimMIPS}.\newline
 }
 \cventry{2013--2014}{Nanjing University}{}{Nanjing}{China}
 {
     \smallskip
     \emph{SmartCar: an intelligent navigation car in the library}
     \medskip  \\
-    SmartCar aims to navigate readers by driving to the right bookshelf autonomously in the library.
-    We implemented the control system on the platform \href{http://zrobot.org/}{\emph{zrobot}}, using C, Java and Verilog languages.
-    To achieve autonomous navigation, we combined the traditional inertial navigation technology with image processing and added many sensors or devices to the car, such as acceleration sensor, gyroscope, USB camera, wireless network card, etc. For more information, you can visit \url{https://github.com/jackyang74/SmartCar}.
+    SmartCar aims to navigate readers autonomously in the library.
+    We implemented the control system on the platform {\emph{zrobot}}, using C, Java and Verilog languages. To achieve autonomous navigation, we combined the traditional inertial navigation technology with image processing and added many sensors or devices to the car, such as acceleration sensor, gyroscope, USB camera, wireless network card, Hall sensors, etc. For more information, you can visit \url{https://github.com/jackyangNJ/SmartCar}.\newline
 }
 
 \cventry{2013 summer}{Institute of Computing Technology}{Chinese Academy of Sciences}{Beijing}{China}
@@ -95,9 +107,7 @@
     \smallskip
     \emph{testing Xilinx soft processor MicroBlaze performance and building a prototype system}
     \medskip  \\
-    The group I joined was to implement a system by using a new memory access protocol based on the asynchronous request and response message.
-    This message-based memory could improve the effective utilization of memory bandwidth.
-    My major work was to test the performance of soft processor MicroBlaze on target hardware to indicate whether it was suitable to be used in the system, and meanwhile I built a prototype system, a network composed of a interconnect 3x3 mesh of nine MicroBlaze processors on one FPGA chip.
+    The project was to aid ICT research. My major work was to test the performance of soft processor MicroBlaze on Linux with Xilinx FPGA, and meanwhile I built a research prototype system, a network composed of a interconnect 3x3 mesh of nine MicroBlaze processors on one FPGA chip.\newline
 }
 
 
@@ -109,7 +119,7 @@
 % unsrt means the publications are displayed in the order in which
 % they appear in the publications.bib file
 \bibliographystyle{unsrt}
-\bibliography{publications}
+%\bibliography{publications}
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
